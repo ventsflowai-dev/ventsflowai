@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Layout } from "@/components/Layout";
 import Index from "./pages/Index.tsx";
 import Contact from "./pages/Contact.tsx";
+import About from "./pages/About.tsx";
 import ComingSoon from "./pages/ComingSoon.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -35,7 +36,7 @@ const App = () => (
               <Route path="/solutions" element={<ComingSoon title="Solutions & Products" blurb="Deep dives on HRease and Eventeel are coming. Request a private demo today." />} />
               <Route path="/case-studies" element={<ComingSoon title="Case Studies" blurb="Detailed case studies on recruitment, events and enterprise AI transformations are being prepared." />} />
               <Route path="/industries" element={<ComingSoon title="Industries" blurb="Tailored AI solutions for recruitment, HR, events, SaaS, healthcare, education, e-commerce and enterprise operations." />} />
-              <Route path="/about" element={<ComingSoon title="About Ventsflow AI" blurb="Our mission, philosophy, technology stack and engagement process — full page coming next." />} />
+              <Route path="/about" element={<About />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
