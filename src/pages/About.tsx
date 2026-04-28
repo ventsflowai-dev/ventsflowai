@@ -26,7 +26,7 @@ const fadeUp = {
   show: (i: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: [0.21, 0.6, 0.32, 1], delay: i * 0.06 },
+    transition: { duration: 0.55, ease: [0.21, 0.6, 0.32, 1] as [number, number, number, number], delay: i * 0.06 },
   }),
 };
 
@@ -68,7 +68,7 @@ const About = () => {
       <SEO
         title="About Ventsflow AI — AI Systems Architecture & Automation Consultancy"
         description="Ventsflow AI is a boutique AI systems architecture and workflow automation consultancy. Learn about our mission, approach, technology stack and team."
-        canonical={`${siteConfig.url}/about`}
+        path="/about"
       />
 
       {/* Hero */}
