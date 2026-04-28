@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   Calendar,
@@ -21,7 +21,7 @@ import { SEO } from "@/components/SEO";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   show: (i: number = 0) => ({
     opacity: 1,
