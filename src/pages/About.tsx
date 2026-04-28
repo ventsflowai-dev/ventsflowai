@@ -54,12 +54,13 @@ const stack = [
   { name: "Twilio", desc: "Telephony & messaging" },
 ];
 
-// Placeholder team — replace with real members & photos when available.
+// Leadership — currently founder-led. Add additional members as the team grows.
 const team = [
-  { name: "Your Name", role: "Founder & AI Systems Architect", bio: "Designs and ships AI-first products and workflow automation systems for ambitious teams." },
-  { name: "Team Member", role: "Lead Full-Stack Engineer", bio: "Builds robust, scalable web applications and integrations across the Ventsflow stack." },
-  { name: "Team Member", role: "Automation Engineer", bio: "Architects n8n, Zapier and API workflows that turn manual ops into autonomous systems." },
-  { name: "Team Member", role: "Conversational AI Engineer", bio: "Develops voice and chat agents on Retell AI, Twilio and modern LLM stacks." },
+  {
+    name: "Obisanya Daniel",
+    role: "CEO & Lead Engineer",
+    bio: "Designs custom AI solutions and intelligent workflows that eliminate repetitive work and cut down manual tasks — helping teams operate with leverage, speed and clarity.",
+  },
 ];
 
 const About = () => {
