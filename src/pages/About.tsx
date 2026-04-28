@@ -249,16 +249,16 @@ const About = () => {
             variants={fadeUp}
             className="mx-auto max-w-2xl text-center"
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">The Team</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Leadership</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-              Engineers, architects & automation specialists
+              Founder-led. Engineering-driven.
             </h2>
             <p className="mt-4 text-muted-foreground">
-              A senior team obsessed with shipping AI systems that create real business outcomes.
+              Ventsflow AI is led by a hands-on engineer who architects every system we ship — from first audit to production deployment.
             </p>
           </motion.div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto mt-14 grid max-w-xl gap-6">
             {team.map((m, i) => (
               <motion.div
                 key={i}
@@ -269,8 +269,8 @@ const About = () => {
                 variants={fadeUp}
                 className="card-pro text-center"
               >
-                <div className="mx-auto h-24 w-24 rounded-full bg-gradient-primary p-[2px]">
-                  <div className="flex h-full w-full items-center justify-center rounded-full bg-card text-2xl font-semibold text-gradient">
+                <div className="mx-auto h-28 w-28 rounded-full bg-gradient-primary p-[2px]">
+                  <div className="flex h-full w-full items-center justify-center rounded-full bg-card text-3xl font-semibold text-gradient">
                     {m.name
                       .split(" ")
                       .map((n) => n[0])
@@ -278,7 +278,7 @@ const About = () => {
                       .join("")}
                   </div>
                 </div>
-                <h3 className="mt-5 text-lg font-semibold">{m.name}</h3>
+                <h3 className="mt-5 text-xl font-semibold">{m.name}</h3>
                 <p className="text-sm text-primary">{m.role}</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.bio}</p>
                 <div className="mt-5 flex items-center justify-center gap-2 text-muted-foreground">
@@ -297,7 +297,7 @@ const About = () => {
           </div>
 
           <p className="mt-8 text-center text-xs text-muted-foreground">
-            Team profiles are placeholders — share names, roles, bios and photos to populate this section.
+            Share Daniel's photo and social links to complete this profile — additional team members can be added as Ventsflow AI grows.
           </p>
         </div>
       </section>
