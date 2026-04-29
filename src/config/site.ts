@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Ventsflow AI builds AI-powered web apps, autonomous agents, and workflow automation systems that transform fragmented business operations into scalable, intelligent ecosystems.",
   url: "https://ventsflow.ai",
-  email: "ifeoluwadaniel25@gmail.com",
+  email: "ventsflowai@gmail.com",
 
   // n8n webhook (placeholder — replace with production URL)
   n8nWebhookUrl: "https://your-n8n-instance.example.com/webhook/ventsflow-contact",
@@ -14,8 +14,9 @@ export const siteConfig = {
   calendlyUrl: "https://calendly.com/ventsflowai/30min",
 
   social: {
-    linkedin: "https://www.linkedin.com/in/daniel-obisanya/",
-    email: "mailto:ifeoluwadaniel25@gmail.com",
+    linkedin: "https://www.linkedin.com/company/ventsflow-ai/",
+    instagram: "https://www.instagram.com/ventsflow_ai/",
+    email: "mailto:ventsflowai@gmail.com",
   },
 
   // Flagship products

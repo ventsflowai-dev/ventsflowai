@@ -65,7 +65,7 @@ const team = [
       "At Ventsflow AI, Daniel brings together full-stack web development, workflow automation, and real-world AI implementation to help businesses move from manual processes to intelligent, scalable systems.",
     ],
     linkedin: "https://www.linkedin.com/in/daniel-obisanya/",
-    email: "ifeoluwadaniel25@gmail.com",
+    email: "ventsflowai@gmail.com",
     photo: "", // TODO: add photo at src/assets/daniel.jpg and import
   },
 ];
