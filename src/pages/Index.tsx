@@ -1,8 +1,9 @@
 import { motion, type Variants } from "framer-motion";
-import { ArrowRight, Calendar, Sparkles, Zap, Bot, Mic, Workflow, Database, ShieldCheck, Cpu, LineChart, Users, CalendarDays } from "lucide-react";
+import { ArrowRight, Calendar, Sparkles, Zap, Bot, Mic, Workflow, Database, ShieldCheck, Cpu, LineChart, Users, CalendarDays, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
+import { BookCallButton } from "@/components/Calendly";
 import { siteConfig } from "@/config/site";
 import heroImg from "@/assets/hero-network.jpg";
 
