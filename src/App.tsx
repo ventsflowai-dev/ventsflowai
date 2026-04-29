@@ -33,10 +33,8 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/services" element={<ComingSoon title="Services" blurb="A detailed breakdown of our AI engineering and automation services is on the way. In the meantime, book a strategy call to discuss your specific needs." />} />
-              <Route path="/solutions" element={<ComingSoon title="Solutions & Products" blurb="Deep dives on HRease and Eventeel are coming. Request a private demo today." />} />
+              <Route path="/services" element={<Services />} />
               <Route path="/case-studies" element={<ComingSoon title="Case Studies" blurb="Detailed case studies on recruitment, events and enterprise AI transformations are being prepared." />} />
-              <Route path="/industries" element={<ComingSoon title="Industries" blurb="Tailored AI solutions for recruitment, HR, events, SaaS, healthcare, education, e-commerce and enterprise operations." />} />
               <Route path="/about" element={<About />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
