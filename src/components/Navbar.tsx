@@ -4,6 +4,7 @@ import { Menu, X, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/Logo";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { BookCallButton } from "@/components/Calendly";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
