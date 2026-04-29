@@ -27,6 +27,7 @@ const cols = [
     links: [
       { label: siteConfig.email, href: `mailto:${siteConfig.email}`, external: true },
       { label: "LinkedIn", href: siteConfig.social.linkedin, external: true },
+      { label: "Instagram", href: siteConfig.social.instagram, external: true },
     ],
   },
 ];
