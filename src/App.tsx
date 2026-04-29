@@ -9,6 +9,7 @@ import { Layout } from "@/components/Layout";
 import Index from "./pages/Index.tsx";
 import Contact from "./pages/Contact.tsx";
 import About from "./pages/About.tsx";
+import Services from "./pages/Services.tsx";
 import ComingSoon from "./pages/ComingSoon.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
