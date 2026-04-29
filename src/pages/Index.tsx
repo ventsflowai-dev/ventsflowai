@@ -265,10 +265,9 @@ const Index = () => {
                 </ul>
                 <div className="mt-8 flex items-center gap-3">
                   <Button asChild variant="hero" size="sm">
-                    <Link to="/solutions">Request demo</Link>
-                  </Button>
-                  <Button asChild variant="ghost" size="sm">
-                    <Link to="/solutions">Learn more <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                    <a href={p.href} target="_blank" rel="noreferrer">
+                      {p.cta} <ExternalLink className="ml-1.5 h-3.5 w-3.5" />
+                    </a>
                   </Button>
                 </div>
               </div>
