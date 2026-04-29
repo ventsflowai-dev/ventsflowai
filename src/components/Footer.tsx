@@ -1,33 +1,32 @@
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import { Logo } from "@/components/Logo";
 import { siteConfig } from "@/config/site";
+import { BookCallButton } from "@/components/Calendly";
 
 const cols = [
   {
-    title: "Solutions",
+    title: "Company",
     links: [
-      { label: "AI Web Applications", href: "/services" },
-      { label: "Workflow Automation", href: "/services" },
-      { label: "Conversational AI", href: "/services" },
-      { label: "Voice AI Systems", href: "/services" },
+      { label: "Home", href: "/" },
+      { label: "About", href: "/about" },
+      { label: "Services", href: "/services" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   {
     title: "Products",
     links: [
-      { label: "HRease", href: "/solutions" },
-      { label: "Eventeel", href: "/solutions" },
-      { label: "Case Studies", href: "/case-studies" },
-      { label: "Industries", href: "/industries" },
+      { label: "HRease", href: siteConfig.products.hrease, external: true },
+      { label: "Eventeel", href: siteConfig.products.eventeel, external: true },
     ],
   },
   {
-    title: "Company",
+    title: "Get in Touch",
     links: [
-      { label: "About", href: "/about" },
-      { label: "Contact", href: "/contact" },
-      { label: "Book a Call", href: siteConfig.calendlyUrl, external: true },
+      { label: siteConfig.email, href: `mailto:${siteConfig.email}`, external: true },
+      { label: "LinkedIn", href: siteConfig.social.linkedin, external: true },
     ],
   },
 ];
@@ -47,18 +46,13 @@ export const Footer = () => (
                className="grid h-9 w-9 place-items-center rounded-lg border border-border text-muted-foreground transition-base hover:border-primary/50 hover:text-foreground">
               <Linkedin className="h-4 w-4" />
             </a>
-            <a aria-label="Twitter" href={siteConfig.social.twitter} target="_blank" rel="noreferrer"
-               className="grid h-9 w-9 place-items-center rounded-lg border border-border text-muted-foreground transition-base hover:border-primary/50 hover:text-foreground">
-              <Twitter className="h-4 w-4" />
-            </a>
-            <a aria-label="GitHub" href={siteConfig.social.github} target="_blank" rel="noreferrer"
-               className="grid h-9 w-9 place-items-center rounded-lg border border-border text-muted-foreground transition-base hover:border-primary/50 hover:text-foreground">
-              <Github className="h-4 w-4" />
-            </a>
             <a aria-label="Email" href={`mailto:${siteConfig.email}`}
                className="grid h-9 w-9 place-items-center rounded-lg border border-border text-muted-foreground transition-base hover:border-primary/50 hover:text-foreground">
               <Mail className="h-4 w-4" />
             </a>
+          </div>
+          <div className="mt-6">
+            <BookCallButton variant="hero" size="sm" label="Book a Strategy Call" />
           </div>
         </div>
 
@@ -71,7 +65,7 @@ export const Footer = () => (
                   <li key={l.label}>
                     {"external" in l && l.external ? (
                       <a href={l.href} target="_blank" rel="noreferrer"
-                         className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                         className="text-sm text-muted-foreground transition-colors hover:text-foreground break-words">
                         {l.label}
                       </a>
                     ) : (
