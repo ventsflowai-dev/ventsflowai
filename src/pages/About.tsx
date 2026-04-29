@@ -332,11 +332,7 @@ const About = () => {
                   Book a free strategy call and we'll map the highest-leverage AI opportunities in your business.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-                  <Button asChild variant="hero" size="lg">
-                    <a href={siteConfig.calendlyUrl} target="_blank" rel="noreferrer">
-                      <Calendar className="mr-2 h-4 w-4" /> Book a Strategy Call
-                    </a>
-                  </Button>
+                  <BookCallButton variant="hero" size="lg" icon={<Calendar className="mr-2 h-4 w-4" />} label="Book a Strategy Call" />
                   <Button asChild variant="outlineGlow" size="lg">
                     <Link to="/contact">
                       Contact Us <ArrowRight className="ml-2 h-4 w-4" />
