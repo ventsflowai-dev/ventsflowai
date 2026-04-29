@@ -49,16 +49,20 @@ const products = [
   {
     name: "HRease",
     tag: "Autonomous Hiring",
-    desc: "Talent intelligence and hiring automation — sourcing, screening, scheduling and offer orchestration in one autonomous system.",
+    desc: "An autonomous hiring and talent intelligence system built to simplify recruitment through resume analysis, candidate qualification, and automated communication.",
     icon: Users,
-    points: ["AI candidate screening", "Automated interview scheduling", "Pipeline analytics & insights"],
+    points: ["AI resume analysis & screening", "Automated candidate qualification", "End-to-end recruitment communication"],
+    cta: "View HRease",
+    href: siteConfig.products.hrease,
   },
   {
     name: "Eventeel",
     tag: "Event AI Platform",
-    desc: "Event logistics and attendee engagement powered by AI — registrations, communications, on-site ops and post-event intelligence.",
+    desc: "An AI-integrated event logistics platform built to manage ticketing, attendee engagement, payments, and event communication from one intelligent system.",
     icon: CalendarDays,
-    points: ["Smart attendee workflows", "Conversational concierge", "Real-time logistics ops"],
+    points: ["Smart ticketing & payments", "Attendee engagement automation", "Unified event communication"],
+    cta: "View Eventeel",
+    href: siteConfig.products.eventeel,
   },
 ];
 
