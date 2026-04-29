@@ -4,6 +4,7 @@ import { Menu, X, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/Logo";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { BookCallButton } from "@/components/Calendly";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -51,11 +52,7 @@ export const Navbar = () => {
 
         <div className="hidden items-center gap-2 lg:flex">
           <ThemeToggle />
-          <Button asChild variant="hero" size="sm">
-            <a href={siteConfig.calendlyUrl} target="_blank" rel="noreferrer">
-              <Calendar className="mr-1.5 h-4 w-4" /> Book a Call
-            </a>
-          </Button>
+          <BookCallButton variant="hero" size="sm" icon={<Calendar className="mr-1.5 h-4 w-4" />} label="Book a Call" />
         </div>
 
         <div className="flex items-center gap-1 lg:hidden">
@@ -86,11 +83,7 @@ export const Navbar = () => {
               {item.label}
             </Link>
           ))}
-          <Button asChild variant="hero" size="sm" className="mt-2">
-            <a href={siteConfig.calendlyUrl} target="_blank" rel="noreferrer">
-              <Calendar className="mr-1.5 h-4 w-4" /> Book a Strategy Call
-            </a>
-          </Button>
+          <BookCallButton variant="hero" size="sm" className="mt-2 w-full" icon={<Calendar className="mr-1.5 h-4 w-4" />} label="Book a Strategy Call" />
         </div>
       </div>
     </header>

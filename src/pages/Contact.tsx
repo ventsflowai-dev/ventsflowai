@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { SEO } from "@/components/SEO";
+import { CalendlyInline } from "@/components/Calendly";
 import { siteConfig } from "@/config/site";
 import { toast } from "sonner";
 
@@ -17,7 +18,6 @@ const schema = z.object({
   email: z.string().trim().email("Please enter a valid email").max(160),
   phone: z.string().trim().max(40).optional().or(z.literal("")),
   service: z.string().min(1, "Please select a service"),
-  budget: z.string().min(1, "Please select a budget range"),
   timeline: z.string().min(1, "Please select a timeline"),
   goals: z.string().trim().min(20, "Please share at least 20 characters about your goals").max(2000),
   website: z.string().max(0).optional(), // honeypot
@@ -27,21 +27,16 @@ type FormState = z.infer<typeof schema>;
 
 const initial: FormState = {
   fullName: "", company: "", email: "", phone: "",
-  service: "", budget: "", timeline: "", goals: "", website: "",
+  service: "", timeline: "", goals: "", website: "",
 };
 
 const services = [
   "AI Web Application Development",
   "Workflow Automation",
   "Conversational AI Agent",
-  "Voice AI System",
+  "Voice AI Agent",
   "CRM / API Integration",
-  "Recruitment Automation (HRease)",
-  "Event Automation (Eventeel)",
-  "Enterprise AI Infrastructure",
-  "Other / Not sure yet",
 ];
-const budgets = ["< $5k", "$5k – $15k", "$15k – $50k", "$50k – $150k", "$150k+"];
 const timelines = ["ASAP (within 2 weeks)", "1 month", "1–3 months", "Exploring options"];
 
 const Contact = () => {
@@ -184,24 +179,15 @@ const Contact = () => {
                         </SelectContent>
                       </Select>
                     </Field>
-                    <Field id="budget" label="Budget range" error={errors.budget}>
-                      <Select value={form.budget} onValueChange={(v) => update("budget", v)}>
-                        <SelectTrigger id="budget"><SelectValue placeholder="Select a range" /></SelectTrigger>
+                    <Field id="timeline" label="Timeline" error={errors.timeline}>
+                      <Select value={form.timeline} onValueChange={(v) => update("timeline", v)}>
+                        <SelectTrigger id="timeline"><SelectValue placeholder="Select a timeline" /></SelectTrigger>
                         <SelectContent>
-                          {budgets.map((b) => <SelectItem key={b} value={b}>{b}</SelectItem>)}
+                          {timelines.map((t) => <SelectItem key={t} value={t}>{t}</SelectItem>)}
                         </SelectContent>
                       </Select>
                     </Field>
                   </div>
-
-                  <Field id="timeline" label="Timeline" error={errors.timeline}>
-                    <Select value={form.timeline} onValueChange={(v) => update("timeline", v)}>
-                      <SelectTrigger id="timeline"><SelectValue placeholder="Select a timeline" /></SelectTrigger>
-                      <SelectContent>
-                        {timelines.map((t) => <SelectItem key={t} value={t}>{t}</SelectItem>)}
-                      </SelectContent>
-                    </Select>
-                  </Field>
 
                   <Field id="goals" label="Project goals & context" error={errors.goals}>
                     <Textarea
@@ -236,7 +222,7 @@ const Contact = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="lg:col-span-5"
           >
-            <div className="gradient-border p-7 md:p-8">
+            <div id="schedule" className="gradient-border p-7 md:p-8">
               <div className="flex items-center gap-3">
                 <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-primary text-primary-foreground">
                   <Calendar className="h-5 w-5" />
@@ -250,20 +236,9 @@ const Contact = () => {
                 Pick a 30-minute slot. We'll review your operations and identify the 1–3 highest-leverage
                 AI and automation opportunities.
               </p>
-              <Button asChild variant="hero" size="lg" className="mt-6 w-full">
-                <a href={siteConfig.calendlyUrl} target="_blank" rel="noreferrer">
-                  <Calendar className="mr-1 h-4 w-4" /> Open scheduler
-                </a>
-              </Button>
 
-              {/* Embedded Calendly iframe (works once siteConfig.calendlyUrl is set) */}
-              <div className="mt-6 overflow-hidden rounded-xl border border-border/60">
-                <iframe
-                  src={siteConfig.calendlyUrl}
-                  title="Schedule a strategy call"
-                  className="h-[420px] w-full"
-                  loading="lazy"
-                />
+              <div className="mt-6">
+                <CalendlyInline height={700} />
               </div>
             </div>
 
@@ -272,7 +247,7 @@ const Contact = () => {
               <ul className="mt-4 space-y-3 text-sm">
                 <li className="flex items-center gap-3 text-muted-foreground">
                   <Mail className="h-4 w-4 text-primary" />
-                  <a href={`mailto:${siteConfig.email}`} className="hover:text-foreground">{siteConfig.email}</a>
+                  <a href={`mailto:${siteConfig.email}`} className="hover:text-foreground break-all">{siteConfig.email}</a>
                 </li>
                 <li className="flex items-center gap-3 text-muted-foreground">
                   <Building2 className="h-4 w-4 text-primary" /> Remote-first · Serving global teams

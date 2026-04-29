@@ -1,32 +1,34 @@
 // Ventsflow AI — Site configuration
-// Replace these placeholders with your production values.
 export const siteConfig = {
   name: "Ventsflow AI",
   tagline: "Architecting Intelligent Workflows & Real-World AI Solutions",
   description:
     "Ventsflow AI builds AI-powered web apps, autonomous agents, and workflow automation systems that transform fragmented business operations into scalable, intelligent ecosystems.",
   url: "https://ventsflow.ai",
-  email: "hello@ventsflow.ai",
+  email: "ifeoluwadaniel25@gmail.com",
 
-  // TODO: replace with your production n8n webhook URL
+  // n8n webhook (placeholder — replace with production URL)
   n8nWebhookUrl: "https://your-n8n-instance.example.com/webhook/ventsflow-contact",
 
-  // TODO: replace with your Calendly scheduling URL
-  calendlyUrl: "https://calendly.com/your-handle/strategy-call",
+  // Calendly
+  calendlyUrl: "https://calendly.com/ventsflowai/30min",
 
   social: {
-    linkedin: "https://www.linkedin.com/company/ventsflow-ai",
-    twitter: "https://twitter.com/ventsflow",
-    github: "https://github.com/ventsflow",
+    linkedin: "https://www.linkedin.com/in/daniel-obisanya/",
+    email: "mailto:ifeoluwadaniel25@gmail.com",
+  },
+
+  // Flagship products
+  products: {
+    hrease: "https://www.hrease.com.ng/",
+    eventeel: "https://www.eventeel.com.ng/",
   },
 
   nav: [
     { label: "Home", href: "/" },
-    { label: "Services", href: "/services" },
-    { label: "Solutions", href: "/solutions" },
-    { label: "Case Studies", href: "/case-studies" },
-    { label: "Industries", href: "/industries" },
     { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Case Studies", href: "/case-studies" },
     { label: "Contact", href: "/contact" },
   ],
 };

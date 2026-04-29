@@ -1,8 +1,9 @@
 import { motion, type Variants } from "framer-motion";
-import { ArrowRight, Calendar, Sparkles, Zap, Bot, Mic, Workflow, Database, ShieldCheck, Cpu, LineChart, Users, CalendarDays } from "lucide-react";
+import { ArrowRight, Calendar, Sparkles, Zap, Bot, Mic, Workflow, Database, ShieldCheck, Cpu, LineChart, Users, CalendarDays, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
+import { BookCallButton } from "@/components/Calendly";
 import { siteConfig } from "@/config/site";
 import heroImg from "@/assets/hero-network.jpg";
 
@@ -48,16 +49,20 @@ const products = [
   {
     name: "HRease",
     tag: "Autonomous Hiring",
-    desc: "Talent intelligence and hiring automation — sourcing, screening, scheduling and offer orchestration in one autonomous system.",
+    desc: "An autonomous hiring and talent intelligence system built to simplify recruitment through resume analysis, candidate qualification, and automated communication.",
     icon: Users,
-    points: ["AI candidate screening", "Automated interview scheduling", "Pipeline analytics & insights"],
+    points: ["AI resume analysis & screening", "Automated candidate qualification", "End-to-end recruitment communication"],
+    cta: "View HRease",
+    href: siteConfig.products.hrease,
   },
   {
     name: "Eventeel",
     tag: "Event AI Platform",
-    desc: "Event logistics and attendee engagement powered by AI — registrations, communications, on-site ops and post-event intelligence.",
+    desc: "An AI-integrated event logistics platform built to manage ticketing, attendee engagement, payments, and event communication from one intelligent system.",
     icon: CalendarDays,
-    points: ["Smart attendee workflows", "Conversational concierge", "Real-time logistics ops"],
+    points: ["Smart ticketing & payments", "Attendee engagement automation", "Unified event communication"],
+    cta: "View Eventeel",
+    href: siteConfig.products.eventeel,
   },
 ];
 
@@ -109,14 +114,10 @@ const Index = () => {
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">
-              <Button asChild variant="hero" size="lg">
-                <a href={siteConfig.calendlyUrl} target="_blank" rel="noreferrer">
-                  <Calendar className="mr-1 h-4 w-4" /> Book a Strategy Call
-                </a>
-              </Button>
+              <BookCallButton variant="hero" size="lg" icon={<Calendar className="mr-1 h-4 w-4" />} label="Book a Strategy Call" />
               <Button asChild variant="outlineGlow" size="lg">
                 <Link to="/services">
-                  Explore Solutions <ArrowRight className="ml-1 h-4 w-4" />
+                  Explore Services <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </Button>
             </div>
@@ -264,10 +265,9 @@ const Index = () => {
                 </ul>
                 <div className="mt-8 flex items-center gap-3">
                   <Button asChild variant="hero" size="sm">
-                    <Link to="/solutions">Request demo</Link>
-                  </Button>
-                  <Button asChild variant="ghost" size="sm">
-                    <Link to="/solutions">Learn more <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                    <a href={p.href} target="_blank" rel="noreferrer">
+                      {p.cta} <ExternalLink className="ml-1.5 h-3.5 w-3.5" />
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -335,11 +335,7 @@ const Index = () => {
               Book a 30-minute strategy call. We'll map your highest-leverage automation and AI opportunities — no slides, just systems.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90">
-                <a href={siteConfig.calendlyUrl} target="_blank" rel="noreferrer">
-                  <Calendar className="mr-1 h-4 w-4" /> Book a Strategy Call
-                </a>
-              </Button>
+              <BookCallButton size="lg" className="bg-background text-foreground hover:bg-background/90" icon={<Calendar className="mr-1 h-4 w-4" />} label="Book a Strategy Call" />
               <Button asChild variant="glass" size="lg">
                 <Link to="/contact">Send a brief <ArrowRight className="ml-1 h-4 w-4" /></Link>
               </Button>
