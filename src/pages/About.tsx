@@ -13,11 +13,11 @@ import {
   Code2,
   Rocket,
   Linkedin,
-  Twitter,
   Mail,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
+import { BookCallButton } from "@/components/Calendly";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
