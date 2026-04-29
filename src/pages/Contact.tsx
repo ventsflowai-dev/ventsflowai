@@ -178,24 +178,15 @@ const Contact = () => {
                         </SelectContent>
                       </Select>
                     </Field>
-                    <Field id="budget" label="Budget range" error={errors.budget}>
-                      <Select value={form.budget} onValueChange={(v) => update("budget", v)}>
-                        <SelectTrigger id="budget"><SelectValue placeholder="Select a range" /></SelectTrigger>
+                    <Field id="timeline" label="Timeline" error={errors.timeline}>
+                      <Select value={form.timeline} onValueChange={(v) => update("timeline", v)}>
+                        <SelectTrigger id="timeline"><SelectValue placeholder="Select a timeline" /></SelectTrigger>
                         <SelectContent>
-                          {budgets.map((b) => <SelectItem key={b} value={b}>{b}</SelectItem>)}
+                          {timelines.map((t) => <SelectItem key={t} value={t}>{t}</SelectItem>)}
                         </SelectContent>
                       </Select>
                     </Field>
                   </div>
-
-                  <Field id="timeline" label="Timeline" error={errors.timeline}>
-                    <Select value={form.timeline} onValueChange={(v) => update("timeline", v)}>
-                      <SelectTrigger id="timeline"><SelectValue placeholder="Select a timeline" /></SelectTrigger>
-                      <SelectContent>
-                        {timelines.map((t) => <SelectItem key={t} value={t}>{t}</SelectItem>)}
-                      </SelectContent>
-                    </Select>
-                  </Field>
 
                   <Field id="goals" label="Project goals & context" error={errors.goals}>
                     <Textarea
