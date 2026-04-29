@@ -47,6 +47,10 @@ export const Footer = () => (
                className="grid h-9 w-9 place-items-center rounded-lg border border-border text-muted-foreground transition-base hover:border-primary/50 hover:text-foreground">
               <Linkedin className="h-4 w-4" />
             </a>
+            <a aria-label="Instagram" href={siteConfig.social.instagram} target="_blank" rel="noreferrer"
+               className="grid h-9 w-9 place-items-center rounded-lg border border-border text-muted-foreground transition-base hover:border-primary/50 hover:text-foreground">
+              <Instagram className="h-4 w-4" />
+            </a>
             <a aria-label="Email" href={`mailto:${siteConfig.email}`}
                className="grid h-9 w-9 place-items-center rounded-lg border border-border text-muted-foreground transition-base hover:border-primary/50 hover:text-foreground">
               <Mail className="h-4 w-4" />
