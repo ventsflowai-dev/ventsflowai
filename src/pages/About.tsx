@@ -57,9 +57,16 @@ const stack = [
 // Leadership — currently founder-led. Add additional members as the team grows.
 const team = [
   {
-    name: "Obisanya Daniel",
-    role: "CEO & Lead Engineer",
-    bio: "Designs custom AI solutions and intelligent workflows that eliminate repetitive work and cut down manual tasks — helping teams operate with leverage, speed and clarity.",
+    name: "Daniel Obisanya",
+    role: "CEO & Lead Engineer, Ventsflow AI",
+    bio: [
+      "Daniel Obisanya is a web developer, AI automation specialist, and systems builder with a strong background in creating practical digital solutions for growing businesses. He began his journey in web development and later transitioned into AI and automation, combining both disciplines to build intelligent workflows, AI-powered web applications, and business automation systems.",
+      "His experience spans work with startups and technology-driven organizations including Altaria Hub, where he worked as a Web Developer, Jakk Innovations, where he served as IT and Web Manager, and Quint AI, where he worked as an AI and Automation Specialist.",
+      "At Ventsflow AI, Daniel brings together full-stack web development, workflow automation, and real-world AI implementation to help businesses move from manual processes to intelligent, scalable systems.",
+    ],
+    linkedin: "https://www.linkedin.com/in/daniel-obisanya/",
+    email: "ifeoluwadaniel25@gmail.com",
+    photo: "", // TODO: add photo at src/assets/daniel.jpg and import
   },
 ];
 
