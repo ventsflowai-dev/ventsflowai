@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { SEO } from "@/components/SEO";
+import { CalendlyInline } from "@/components/Calendly";
 import { siteConfig } from "@/config/site";
 import { toast } from "sonner";
 
