@@ -46,11 +46,13 @@ export const CalendlyInline = ({ url = siteConfig.calendlyUrl, className, height
     };
   }, [url]);
 
+  const style: React.CSSProperties = { minWidth: 320 };
+  if (height > 0) style.height = height;
   return (
     <div
       ref={ref}
       className={cn("calendly-inline-widget w-full overflow-hidden rounded-xl border border-border/60 bg-card", className)}
-      style={{ minWidth: 320, height }}
+      style={style}
     />
   );
 };
