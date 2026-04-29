@@ -261,7 +261,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="mx-auto mt-14 grid max-w-xl gap-6">
+          <div className="mx-auto mt-14 max-w-4xl">
             {team.map((m, i) => (
               <motion.div
                 key={i}
@@ -270,38 +270,51 @@ const About = () => {
                 whileInView="show"
                 viewport={{ once: true, margin: "-60px" }}
                 variants={fadeUp}
-                className="card-pro text-center"
+                className="gradient-border p-[1px]"
               >
-                <div className="mx-auto h-28 w-28 rounded-full bg-gradient-primary p-[2px]">
-                  <div className="flex h-full w-full items-center justify-center rounded-full bg-card text-3xl font-semibold text-gradient">
-                    {m.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .slice(0, 2)
-                      .join("")}
+                <div className="grid gap-8 rounded-[calc(var(--radius)-1px)] bg-card p-6 md:grid-cols-[220px_1fr] md:gap-10 md:p-10">
+                  <div className="mx-auto md:mx-0">
+                    <div className="h-44 w-44 rounded-2xl bg-gradient-primary p-[2px] md:h-52 md:w-52">
+                      <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-[calc(theme(borderRadius.2xl)-2px)] bg-card">
+                        {m.photo ? (
+                          <img src={m.photo} alt={m.name} className="h-full w-full object-cover" />
+                        ) : (
+                          <span className="text-4xl font-semibold text-gradient">
+                            {m.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                          </span>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <h3 className="mt-5 text-xl font-semibold">{m.name}</h3>
-                <p className="text-sm text-primary">{m.role}</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.bio}</p>
-                <div className="mt-5 flex items-center justify-center gap-2 text-muted-foreground">
-                  <a aria-label="LinkedIn" href="#" className="rounded-md p-2 hover:bg-secondary hover:text-foreground transition-base">
-                    <Linkedin className="h-4 w-4" />
-                  </a>
-                  <a aria-label="Twitter" href="#" className="rounded-md p-2 hover:bg-secondary hover:text-foreground transition-base">
-                    <Twitter className="h-4 w-4" />
-                  </a>
-                  <a aria-label="Email" href="#" className="rounded-md p-2 hover:bg-secondary hover:text-foreground transition-base">
-                    <Mail className="h-4 w-4" />
-                  </a>
+                  <div>
+                    <h3 className="text-2xl font-semibold md:text-3xl">{m.name}</h3>
+                    <p className="mt-1 text-sm font-medium text-primary">{m.role}</p>
+                    <div className="mt-5 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                      {m.bio.map((p, idx) => (
+                        <p key={idx}>{p}</p>
+                      ))}
+                    </div>
+                    <div className="mt-6 flex flex-wrap items-center gap-2">
+                      <a
+                        href={m.linkedin}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 rounded-lg border border-border/60 bg-secondary/60 px-3.5 py-2 text-sm font-medium text-foreground/90 transition-base hover:border-primary/50 hover:text-foreground"
+                      >
+                        <Linkedin className="h-4 w-4 text-primary" /> LinkedIn
+                      </a>
+                      <a
+                        href={`mailto:${m.email}`}
+                        className="inline-flex items-center gap-2 rounded-lg border border-border/60 bg-secondary/60 px-3.5 py-2 text-sm font-medium text-foreground/90 transition-base hover:border-primary/50 hover:text-foreground"
+                      >
+                        <Mail className="h-4 w-4 text-primary" /> {m.email}
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
-
-          <p className="mt-8 text-center text-xs text-muted-foreground">
-            Share Daniel's photo and social links to complete this profile — additional team members can be added as Ventsflow AI grows.
-          </p>
         </div>
       </section>
 
