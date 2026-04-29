@@ -221,7 +221,7 @@ const Contact = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="lg:col-span-5"
           >
-            <div className="gradient-border p-7 md:p-8">
+            <div id="schedule" className="gradient-border p-7 md:p-8">
               <div className="flex items-center gap-3">
                 <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-primary text-primary-foreground">
                   <Calendar className="h-5 w-5" />
@@ -235,20 +235,9 @@ const Contact = () => {
                 Pick a 30-minute slot. We'll review your operations and identify the 1–3 highest-leverage
                 AI and automation opportunities.
               </p>
-              <Button asChild variant="hero" size="lg" className="mt-6 w-full">
-                <a href={siteConfig.calendlyUrl} target="_blank" rel="noreferrer">
-                  <Calendar className="mr-1 h-4 w-4" /> Open scheduler
-                </a>
-              </Button>
 
-              {/* Embedded Calendly iframe (works once siteConfig.calendlyUrl is set) */}
-              <div className="mt-6 overflow-hidden rounded-xl border border-border/60">
-                <iframe
-                  src={siteConfig.calendlyUrl}
-                  title="Schedule a strategy call"
-                  className="h-[420px] w-full"
-                  loading="lazy"
-                />
+              <div className="mt-6">
+                <CalendlyInline height={700} />
               </div>
             </div>
 
@@ -257,7 +246,7 @@ const Contact = () => {
               <ul className="mt-4 space-y-3 text-sm">
                 <li className="flex items-center gap-3 text-muted-foreground">
                   <Mail className="h-4 w-4 text-primary" />
-                  <a href={`mailto:${siteConfig.email}`} className="hover:text-foreground">{siteConfig.email}</a>
+                  <a href={`mailto:${siteConfig.email}`} className="hover:text-foreground break-all">{siteConfig.email}</a>
                 </li>
                 <li className="flex items-center gap-3 text-muted-foreground">
                   <Building2 className="h-4 w-4 text-primary" /> Remote-first · Serving global teams
