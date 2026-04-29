@@ -114,14 +114,10 @@ const Index = () => {
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">
-              <Button asChild variant="hero" size="lg">
-                <a href={siteConfig.calendlyUrl} target="_blank" rel="noreferrer">
-                  <Calendar className="mr-1 h-4 w-4" /> Book a Strategy Call
-                </a>
-              </Button>
+              <BookCallButton variant="hero" size="lg" icon={<Calendar className="mr-1 h-4 w-4" />} label="Book a Strategy Call" />
               <Button asChild variant="outlineGlow" size="lg">
                 <Link to="/services">
-                  Explore Solutions <ArrowRight className="ml-1 h-4 w-4" />
+                  Explore Services <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </Button>
             </div>
