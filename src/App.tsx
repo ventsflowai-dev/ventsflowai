@@ -14,6 +14,7 @@ import CaseStudies from "./pages/CaseStudies.tsx";
 import ComingSoon from "./pages/ComingSoon.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
+
 const queryClient = new QueryClient();
 
 const ScrollToTop = () => {

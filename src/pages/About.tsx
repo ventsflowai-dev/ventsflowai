@@ -20,6 +20,7 @@ import { SEO } from "@/components/SEO";
 import { BookCallButton } from "@/components/Calendly";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import danielPhoto from "@/assets/daniel.jpg";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -52,6 +53,8 @@ const stack = [
   { name: "Zapier", desc: "SaaS integrations" },
   { name: "Retell AI", desc: "Voice AI agents" },
   { name: "Twilio", desc: "Telephony & messaging" },
+  { name: "Lovable", desc: "Rapid AI-powered interface prototyping" },
+  { name: "Vibe Coding", desc: "AI-assisted product development workflow" },
 ];
 
 // Leadership — currently founder-led. Add additional members as the team grows.
@@ -66,7 +69,7 @@ const team = [
     ],
     linkedin: "https://www.linkedin.com/in/daniel-obisanya/",
     email: "ventsflowai@gmail.com",
-    photo: "", // TODO: add photo at src/assets/daniel.jpg and import
+    photo: danielPhoto,
   },
 ];
 
@@ -274,10 +277,10 @@ const About = () => {
               >
                 <div className="grid gap-8 rounded-[calc(var(--radius)-1px)] bg-card p-6 md:grid-cols-[220px_1fr] md:gap-10 md:p-10">
                   <div className="mx-auto md:mx-0">
-                    <div className="h-44 w-44 rounded-2xl bg-gradient-primary p-[2px] md:h-52 md:w-52">
+                    <div className="h-64 w-60 rounded-2xl bg-gradient-primary p-[2px] md:h-80 md:w-60">
                       <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-[calc(theme(borderRadius.2xl)-2px)] bg-card">
                         {m.photo ? (
-                          <img src={m.photo} alt={m.name} className="h-full w-full object-cover" />
+                         <img src={m.photo} alt={m.name} className="h-full w-full object-cover object-top" />
                         ) : (
                           <span className="text-4xl font-semibold text-gradient">
                             {m.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
