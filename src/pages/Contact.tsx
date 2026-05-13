@@ -125,6 +125,8 @@ const Contact = () => {
       });
 
       if (!res.ok) {
+        const responseText = await res.text();
+        console.error("Webhook response", res.status, responseText);
         throw new Error(`Request failed (${res.status})`);
       }
 
@@ -413,7 +415,7 @@ const Contact = () => {
               </p>
 
               <div className="mt-6 overflow-hidden rounded-xl">
-                <CalendlyInline url={CALENDLY_URL} className="w-full" />
+                <CalendlyInline className="w-full" />
               </div>
             </div>
 

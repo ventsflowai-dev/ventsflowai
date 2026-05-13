@@ -26,13 +26,17 @@ export const BookCallButton = ({
 
 interface CalendlyInlineProps {
   className?: string;
+  url?: string;
 }
 
-export const CalendlyInline = ({ className = "" }: CalendlyInlineProps) => {
+export const CalendlyInline = ({
+  className = "",
+  url = CALENDLY_URL,
+}: CalendlyInlineProps) => {
   return (
     <div className={className}>
       <a
-        href={CALENDLY_URL}
+        href={url}
         target="_blank"
         rel="noopener noreferrer"
         className="block"

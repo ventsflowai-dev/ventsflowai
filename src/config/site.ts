@@ -8,14 +8,14 @@ export const siteConfig = {
   email: "ventsflowai@gmail.com",
 
   // n8n webhook (placeholder — replace with production URL)
-  n8nWebhookUrl: "https://your-n8n-instance.example.com/webhook/ventsflow-contact",
+  n8nWebhookUrl: "https://n8n.srv1264889.hstgr.cloud/webhook/6b79f0dc-a5c3-47c4-b566-9958176fe3e7",
 
   // Calendly
   calendlyUrl: "https://calendly.com/ventsflowai/30min",
 
   social: {
-    linkedin: "https://www.linkedin.com/company/ventsflow-ai/",
-    instagram: "https://www.instagram.com/ventsflow_ai/",
+    linkedin: "https://www.linkedin.com/company/112888908/admin/dashboard/",
+    instagram: "https://www.instagram.com/ventsflow_ai?igsh=MjY3OGp5cHdqY3Zz&utm_source=qr",
     email: "mailto:ventsflowai@gmail.com",
   },
 
