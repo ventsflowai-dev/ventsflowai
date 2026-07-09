@@ -90,9 +90,10 @@ export const Footer = () => (
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
         </p>
-        <p className="text-xs text-muted-foreground">
-          Architecting Intelligent Workflows & Real-World AI Solutions.
-        </p>
+        <div className="flex gap-6 text-xs text-muted-foreground">
+          <Link to="/privacy" className="transition-colors hover:text-foreground">Privacy Policy</Link>
+          <Link to="/terms" className="transition-colors hover:text-foreground">Terms of Use</Link>
+        </div>
       </div>
     </div>
   </footer>
